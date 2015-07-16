@@ -1,0 +1,15 @@
+{% block content %}
+      <div class="spacer-3"></div>
+      {% if msg %}
+    {{ msg }}
+      {% else %}
+    {% if request.user.is_authenticated %}
+        No content. Your user account may not be set up correctly. Please contact an administrator.
+    {% else %}
+        Please <a href="/">log in</a>.
+    {% endif %}
+      {% endif %}
+        {% endblock %}
+{% block sidebar %}
+
+{% endblock %}

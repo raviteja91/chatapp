@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load inbox %}
+{% inbox_count %}
+{% load i18n %}  
+{% block bodyclass %}about{% endblock %}
+{% block content %}  
+<p><h2>Welcome {{ user.username }} !!!</h2></p>
+{% endblock %}
+{% block sidebar %}
+<ul class="subnavilist" style="background-color:#EEE8AA;height:100px;width:200px">
+    <li><a href="{% url 'messages_inbox' %} ">&raquo;&nbsp;{% trans "Inbox" %}</a></li>
+    <li><a href="{% url 'messages_outbox' %} ">&raquo;&nbsp;{% trans "Sent Messages" %}</a></li>
+    <li><a href="{% url 'messages_compose' %} ">&raquo;&nbsp;{% trans "New Message" %}</a></li>
+    <li><a href="{% url 'messages_trash' %} ">&raquo;&nbsp;{% trans "Trash" %}</a></li>
+    <li><a href="/logout/">&raquo;&nbsp;{% trans "Logout" %}</a></li>
+</ul>
+{% endblock %}

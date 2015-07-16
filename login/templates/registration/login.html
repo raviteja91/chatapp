@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block head %}Login{% endblock %}
+{% block content %}
+    {% if form.errors %}
+        <p>Your username and password didn't match. Please try again.</p>
+    {% endif %}
+    <h1>PLS LOGIN HERE...</h1>
+    <div align="center">
+	<fieldset style="background-color:#98FB98;height:100px;width:400px">
+	<legend align="center">login form</legend>
+    <form method="post" action=".">{% csrf_token %}
+        <table border="0">
+            <tr><th><label for="id_username">Username:</label></th><td>{{ form.username }}</td></tr>
+            <tr><th><label for="id_password">Password:</label></th><td>{{ form.password }}</td></tr>
+        </table>
+        <input type="submit" value="Login" />
+        <input type="hidden" name="next" value="/messages" />
+        <a href="/register"><input type="button" value="Register" /></a>
+    </form>
+    </fieldset>
+</div>
+{% endblock %}
