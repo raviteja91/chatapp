@@ -1,0 +1,7 @@
+*.log
+*.pot
+*.pyc
+*.git
+local_settings.py
+site_media
+
