@@ -2,7 +2,8 @@
 *.pot
 *.pyc
 *.git
-*.gitignore~
+*.swp
+*.swo
 local_settings.py
 site_media
 

@@ -1,9 +1,7 @@
 *.log
 *.pot
 *.pyc
-*.git
-*.swp
-*.swo
 local_settings.py
 site_media
-
+cover
+*~
