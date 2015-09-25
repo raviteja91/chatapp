@@ -1,6 +1,8 @@
 *.log
 *.pot
 *.pyc
+*.git
+*.gitignore~
 local_settings.py
 site_media
 
